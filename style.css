@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* เปลี่ยนเป็นโทนสีฟ้าน้ำเงินแบบขยับได้ */
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6dd5ed, #2193b0);
+    background-size: 400% 400%;
+    animation: bgMove 8s ease infinite;
+    color: #333;
+}
+
+/* พื้นหลังเคลื่อนไหว */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    /* เปลี่ยนแถบหัวเว็บเป็นสีน้ำเงินเข้มไล่ไปฟ้า */
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    animation: fadeDown 1s ease;
+}
+
+/* สไตล์รูปโปรไฟล์วงกลม */
+.profile-container {
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    object-fit: cover; /* ป้องกันรูปเบี้ยว */
+    border: 4px solid #6dd5ed; /* ขอบสีฟ้าพาสเทล */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 10px 0 0;
+}
+
+header p {
+    margin: 5px 0 0;
+    color: #e0f7fa;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    /* เปลี่ยนเงาให้เข้ากับธีมสีฟ้า */
+    box-shadow: 0 0 20px rgba(33, 147, 176, 0.3);
+    animation: fadeUp 1s ease;
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(109, 213, 237, 0.5);
+}
+
+/* หัวข้อสีน้ำเงิน */
+h2 {
+    color: #1e3c72;
+    border-bottom: 2px solid #6dd5ed;
+    padding-bottom: 5px;
+}
+
+/* รูปภาพตกแต่งสัตวแพทย์ */
+.deco-images {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+.deco-img {
+    width: 45%;
+    max-width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin: 0 0 10px;
+    color: #2a5298;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #6dd5ed;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
